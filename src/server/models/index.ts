@@ -1,9 +1,9 @@
-import { userModel } from './User';
+import User from './User';
 import { colorModel } from './Color';
 import { colorCollectionModel } from './ColorCollection';
 
 export default { 
-    user: { model: userModel },
+    user: { model: User },
     color: { model: colorModel },
     colorCollection: { model: colorCollectionModel }
 };
