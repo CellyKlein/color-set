@@ -4,7 +4,7 @@ import controllers from './../controllers';
 
 const router = Router();
 
-router.route('/')
+router.route('/*')
     .get(controllers.frontend);
 
 export default router;
