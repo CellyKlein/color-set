@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use('/static', express.static(path.join(__dirname, '../../build/client/'), { index: false }));
 
-app.get('/', routes.frontend);
+app.get('/*', routes.frontend);
 
 app.listen(port, () =>
 {
