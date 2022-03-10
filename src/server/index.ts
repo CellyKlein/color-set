@@ -4,7 +4,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import log4js from 'log4js';
+import logger from './utils/logger';
 
 import routes from './routes';
 
@@ -12,11 +12,6 @@ const serviceName = process.env.SERVICE_NAME || 'default';
 const app : Application = express();
 const port : number = Number(process.env.PORT) || 3000;
 const databaseUrl : string = process.env.DB_URL || 'mongodb://localhost:27017/colorset-develop';
-log4js.configure({
-    appenders: { [ serviceName ]: { type: 'stdout' } },
-    categories: { default: { appenders: [ serviceName ], level: 'info' } }
-});
-const logger = log4js.getLogger(serviceName);
 
 mongoose.connect(databaseUrl);
 const db : mongoose.Connection = mongoose.connection;
