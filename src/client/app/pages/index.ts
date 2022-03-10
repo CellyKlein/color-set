@@ -1,7 +1,9 @@
-import Error from './Error';
+import NotFound from './NotFound';
+import Login from './Login';
 import Home from './Home';
 
-export { 
-    Error,
+export {
+    Login,
+    NotFound,
     Home
 };

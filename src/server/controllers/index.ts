@@ -1,7 +1,7 @@
 import frontend from './frontend';
-import users from './api/users';
+import user from './api/user';
 
 export default {
     frontend,
-    users: { signup: users.signup }
+    user: { signup: user.signup }
 };

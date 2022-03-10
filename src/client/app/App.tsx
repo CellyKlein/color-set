@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 
-import { Error, Home }from './pages';
+import { NotFound, Home, Login }from './pages';
 
 export default function App()
 {
@@ -15,7 +15,8 @@ export default function App()
 
             <Routes>
                 <Route path="/" element={ <Home /> } />
-                <Route path="/error" element={ <Error /> } />
+                <Route path="/login" element={ <Login /> } />
+                <Route path="*" element={ <NotFound /> } />
             </Routes>
         </BrowserRouter>
     );

@@ -1,5 +1,5 @@
 import { body } from 'express-validator';
-import User from './../models/User';
+import User from '../models/User';
 
 const passwordConfirmation = body('passwordConfirmation').custom((value, { req }) =>
 {
