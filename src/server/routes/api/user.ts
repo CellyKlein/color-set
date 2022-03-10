@@ -1,16 +1,16 @@
 import { Router } from 'express';
 
 import controllers from '../../controllers';
-import userValidations from './../../validations/users';
+import validations from './../../validations';
 
 const router = Router();
 
 router.route('/').post(
-    userValidations.password,
-    userValidations.passwordConfirmation,
-    userValidations.allreadyExits,
-    userValidations.username,
-    controllers.users.signup
+    validations.user.password,
+    validations.user.passwordConfirmation,
+    validations.user.allreadyExits,
+    validations.user.username,
+    controllers.user.signup
 );
 
 export default router;
